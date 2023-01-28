@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+
+function getData() {
+  debugger;
+  axios.get('http://localhost:8010/users/1').then(response => console.log(response.data))
+}
 
 function App() {
   return (
@@ -9,6 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        { getData() }
         <a
           className="App-link"
           href="https://reactjs.org"
